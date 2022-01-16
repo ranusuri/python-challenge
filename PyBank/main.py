@@ -89,5 +89,22 @@ print(f"Total : ${total_amount}")
 print(f"Average  Change: ${avg_changes}")
 print(f"Greatest Increase in Profits : {greatest_increase_date} (${greatest_increase})")
 print(f"Greatest Decrease in Profits : {greatest_decrease_date} (${greatest_decrease})")
-#  Greatest Increase in Profits: Feb-2012 ($1926159)
-#  Greatest Decrease in Profits: Sep-2013 ($-2196167)
+
+
+
+# Set variable for output file
+output_file = os.path.join(".", "analysis","analysis_output.txt")
+
+#  Open the output file
+with open(output_file, "w") as analysis:
+
+
+    # Write the output
+
+    analysis.write("Financial Analysis\n")
+    analysis.write("-----------------------------------\n")
+    analysis.write(f"Total Months :  {total_months}\n")
+    analysis.write(f"Total : ${total_amount}\n")
+    analysis.write(f"Average  Change: ${avg_changes}\n")
+    analysis.write(f"Greatest Increase in Profits : {greatest_increase_date} (${greatest_increase})\n")
+    analysis.write(f"Greatest Decrease in Profits : {greatest_decrease_date} (${greatest_decrease})\n")
